@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(10, 107, 252);
+    color: #e97f7f
     flex-flow: column;
   }
 
@@ -39,7 +39,7 @@ h3 {
     font-style: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: x-large;
-    color: aliceblue;
+    color: #b5bad3;
 }
 
 /* button {
