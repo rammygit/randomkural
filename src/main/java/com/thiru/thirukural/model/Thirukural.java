@@ -39,10 +39,7 @@ public class Thirukural {
     private String eng_exp;
 
 
-    public Thirukural errorObj(){
-
-        return new Thirukural();
-    }
+    
     
 
     
