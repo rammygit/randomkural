@@ -1,0 +1,24 @@
+{
+    "bin": {"thirukural": "jdeploy-bundle/jdeploy.js"},
+    "author": "Ram",
+    "description": "Get new Thirukural on each button click",
+    "main": "index.js",
+    "preferGlobal": true,
+    "repository": "",
+    "version": "1.0.0",
+    "jdeploy": {
+        "jdk": false,
+        "javaVersion": "8",
+        "jar": "target/thirukural-0.0.1-SNAPSHOT.jar",
+        "javafx": false,
+        "title": "RandomThirukural"
+    },
+    "dependencies": {
+        "njre": "^0.2.0",
+        "shelljs": "^0.8.4"
+    },
+    "license": "ISC",
+    "name": "randomthirukural",
+    "files": ["jdeploy-bundle"],
+    "scripts": {"test": "echo \"Error: no test specified\" && exit 1"}
+}
