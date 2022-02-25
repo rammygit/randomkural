@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #e97f7f
+    color: #e97f7f;
     flex-flow: column;
   }
 
