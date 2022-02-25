@@ -6,7 +6,7 @@ btn.addEventListener('click', function (event) {
 	console.log(event.target); // The clicked element
 
     fetch('https://randomkural.herokuapp.com/thirukural/0')
-    // fetch('http://localhost:8080/thirukural/0')
+    // fetch('http://localhost:8081/thirukural/0')
     .then(response => response.json())
     .then(data => {
         console.log(data)
