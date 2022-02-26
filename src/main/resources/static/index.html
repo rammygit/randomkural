@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Thirukural a Day</title>
-    <link rel="stylesheet" href="style_prod.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-  </head>
-  <body>
-      <div id="container" class="center">
-        <h1>Get A New Thirukural Every Click</h1>
-        <div id="btndiv" >
-            <button id="clickbtn">Get a Thirukural</button>
+    <title>New Thirukural on every click</title>
+    <!-- <link rel="stylesheet" href="style_prod.css"> -->
+    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div x-data="{ home: true, about: false }" id="container" >
+
+        <div id="nav" class="pure-menu pure-menu-horizontal">
+
+            <h1>Random Kural</h1>
+            <div x-data="{ open: false }">
+                <button x-on:click="home = true, about=false">Home</button>
+             
+                <div x-show="home">
+                    <div id="container" class="center">
+
+                        <div id="btndiv">
+                            <button id="clickbtn">Get a new one</button>
+                        </div>
+                        <div id="contentdiv"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- <a href="#" @click="home = true, about=false">Home</a> -->
+            <a href="#" @click="about = true">About</a>
         </div>
-        <div id="contentdiv"></div>
-      </div>
-    
-    
-	<script src="index_prod.js"></script>
-	<!-- <script src="index.js"></script> -->
-  </body>
+
+        
+
+        
+
+    </div>
+
+
+
+    <!-- <script src="index_prod.js"></script> -->
+    <script src="index.js"></script>
+</body>
+
 </html>

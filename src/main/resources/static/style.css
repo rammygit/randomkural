@@ -5,6 +5,14 @@
     justify-content: center;
     color: #e97f7f;
     flex-flow: column;
+  } 
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e97f7f;
+    flex-flow: row;
   }
 
 .centerbtn {
