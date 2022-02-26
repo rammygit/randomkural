@@ -8,18 +8,18 @@
     <title>New Thirukural on every click</title>
     <!-- <link rel="stylesheet" href="style_prod.css"> -->
     
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
     <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div x-data="{ home: true, about: false }" id="container" >
+    <!-- <div x-data="{ home: true, about: false }" id="container" >
 
         <div id="nav" class="pure-menu pure-menu-horizontal">
 
-            <h1>Random Kural</h1>
-            <div x-data="{ open: false }">
+            <div :style="{ color: 'Green'}"><strong>Random Kural</strong></div>
+            <div>
                 <button x-on:click="home = true, about=false">Home</button>
              
                 <div x-show="home">
@@ -32,14 +32,47 @@
                     </div>
                 </div>
             </div>
-            <!-- <a href="#" @click="home = true, about=false">Home</a> -->
-            <a href="#" @click="about = true">About</a>
+            <div>
+                <button x-on:click="home = true, about=false">Home</button>
+             
+                <div x-show="home">
+                    <div id="container" class="center">
+
+                        <div id="btndiv">
+                            <button id="clickbtn">Get a new one</button>
+                        </div>
+                        <div id="contentdiv"></div>
+                    </div>
+                </div>
+            </div>
+            <div href="#" @click="about = true,home=false">About</a>
         </div>
 
         
 
         
 
+    </div> -->
+
+
+    <div x-data="{ open: false,home: false, about: false }" id="main">
+        <div id="navdiv" class="pure-menu pure-menu-horizontal">
+            <a href="#" class="pure-menu-heading pure-menu-link">BRAND</a>
+            <button class="pure-menu-item" x-on:click="home = true,about = false">Home</button>
+            <button class="pure-menu-item" x-on:click="home = false,about = true">About</button>
+            <div x-show="home">
+                <div id="container" class="center">
+
+                    <div id="btndiv">
+                        <button id="clickbtn">Get a new one</button>
+                    </div>
+                    <div id="contentdiv"></div>
+                </div>
+            </div>
+            <div x-show="about">
+                About Contents...
+            </div>
+        </div>
     </div>
 
 

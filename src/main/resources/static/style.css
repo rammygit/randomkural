@@ -7,13 +7,13 @@
     flex-flow: column;
   } 
   
-  .nav {
+  /* .nav {
     display: flex;
     align-items: center;
     justify-content: center;
     color: #e97f7f;
     flex-flow: row;
-  }
+  } */
 
 .centerbtn {
     margin: 0 auto;
@@ -26,7 +26,8 @@
   }
 
 body{
-    background: black;
+    background: rgb(31, 30, 30);
+    color: antiquewhite;
 }
 
 h2 {
