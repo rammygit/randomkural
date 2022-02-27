@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>New Thirukural on every click</title>
     <!-- <link rel="stylesheet" href="style_prod.css"> -->
-    
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
     <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -56,23 +56,44 @@
 
 
     <div x-data="{ open: false,home: false, about: false }" id="main">
-        <div id="navdiv" class="pure-menu pure-menu-horizontal">
-            <a href="#" class="pure-menu-heading pure-menu-link">BRAND</a>
-            <button class="pure-menu-item" x-on:click="home = true,about = false">Home</button>
-            <button class="pure-menu-item" x-on:click="home = false,about = true">About</button>
-            <div x-show="home">
-                <div id="container" class="center">
 
-                    <div id="btndiv">
-                        <button id="clickbtn">Get a new one</button>
-                    </div>
-                    <div id="contentdiv"></div>
-                </div>
-            </div>
-            <div x-show="about">
-                About Contents...
+        <div class="header">
+            <div id="navdiv" class="pure-menu pure-menu-horizontal">
+                <a href="#" class="pure-menu-heading">Thirukural at Random</a>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="#" class="pure-menu-link" x-on:click="home = true,about = false">Home</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="#" class="pure-menu-link" x-on:click="home = false,about = true">About</a>
+                    </li>
+                </ul>
             </div>
         </div>
+
+        <div class="splash-container">
+            <div class="splash">
+                <div class="content">
+                    <div x-show="home">
+                        <div id="container" class="center">
+                            <div id="btndiv">
+                                <a id="clickbtn" href="#" class="pure-button pure-button-primary">Get a new one</a>
+                            </div>
+                            <div id="contentdiv"></div>
+                        </div>
+                    </div>
+                    <div x-show="about">
+                        About Contents...
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="content-wrapper">
+            
+        </div> -->
+       
+
     </div>
 
 
