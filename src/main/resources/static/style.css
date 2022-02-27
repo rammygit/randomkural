@@ -73,13 +73,21 @@ label {
     color: #6699cd;
 }
 
-.pure-img-responsive {
+.pure-img-responsive { 
     max-width: 100%;
     height: auto;
 }
 
 .pure-menu-link:hover {
     background-color: #614c4c;
+}
+
+.pure-menu-link {
+    color: #f0e8e8;
+}
+
+.pure-menu-heading {
+    color: #f0e8e8;
 }
 
 /*
@@ -131,10 +139,10 @@ label {
 }
 
 a.pure-button-primary {
-    background: white;
-    color: #1f8dd6;
-    border-radius: 5px;
-    font-size: 120%;
+    background: #131314;
+    color: #89b9d9;
+    /* border-radius: 5px; */
+    font-size: 100%;
 }
 
 
@@ -203,7 +211,7 @@ a.pure-button-primary {
     margin: auto;
     /* position: absolute; */
     top: 100px; left: 0; bottom: 0; right: 0;
-    text-align: center;
+    text-align: left;
     text-transform: uppercase;
 }
 

@@ -55,7 +55,22 @@
     </div> -->
 
 
-    <div x-data="{ open: false,home: false, about: false }" id="main">
+    <div x-data="{ open: false,home: true, about: false,
+        init() {
+            console.log('I am called automatically')
+            fetch('http://localhost:8081/thirukural/0')
+            .then(response => response.json())
+            .then(data => {
+            console.log(data)
+            contentdiv.innerHTML = `<p><h3>${data.sect_tam}</h3></p>
+                                    <p>${data.line1}</p>
+                                    <p>${data.line2}</p>
+                                    <p><h3>Meaning</h3></p>
+                                    <p>${data.tam_exp}</p>
+                                    <p>${data.eng_exp}</p>`
+            })
+        }
+     }" id="main">
 
         <div class="header">
             <div id="navdiv" class="pure-menu pure-menu-horizontal">
