@@ -73,6 +73,10 @@ label {
     color: #6699cd;
 }
 
+a {
+    color: beige;
+}
+
 .pure-img-responsive { 
     max-width: 100%;
     height: auto;
