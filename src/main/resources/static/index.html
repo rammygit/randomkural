@@ -1,24 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Thirukural a Day</title>
-    <link rel="stylesheet" href="style_prod.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
-  </head>
-  <body>
-      <div id="container" class="center">
-        <h1>Get A New Thirukural Every Click</h1>
-        <div id="btndiv" >
-            <button id="clickbtn">Get a Thirukural</button>
+    <title>New Thirukural on every click</title>
+    <!-- <link rel="stylesheet" href="style_prod.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/base-min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <div x-data="{ home: true, about: false }" id="container" >
+
+        <div id="nav" class="pure-menu pure-menu-horizontal">
+
+            <div :style="{ color: 'Green'}"><strong>Random Kural</strong></div>
+            <div>
+                <button x-on:click="home = true, about=false">Home</button>
+             
+                <div x-show="home">
+                    <div id="container" class="center">
+
+                        <div id="btndiv">
+                            <button id="clickbtn">Get a new one</button>
+                        </div>
+                        <div id="contentdiv"></div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button x-on:click="home = true, about=false">Home</button>
+             
+                <div x-show="home">
+                    <div id="container" class="center">
+
+                        <div id="btndiv">
+                            <button id="clickbtn">Get a new one</button>
+                        </div>
+                        <div id="contentdiv"></div>
+                    </div>
+                </div>
+            </div>
+            <div href="#" @click="about = true,home=false">About</a>
         </div>
-        <div id="contentdiv"></div>
-      </div>
-    
-    
-	<script src="index_prod.js"></script>
-	<!-- <script src="index.js"></script> -->
-  </body>
+
+        
+
+        
+
+    </div> -->
+
+
+    <div x-data="{ open: false,home: true, about: false,
+        init() {
+            console.log('I am called automatically')
+            fetch('http://localhost:8081/thirukural/0')
+            .then(response => response.json())
+            .then(data => {
+            console.log(data)
+            contentdiv.innerHTML = `<p><h3>${data.sect_tam}</h3></p>
+                                    <p>${data.line1}</p>
+                                    <p>${data.line2}</p>
+                                    <p><h3>Meaning</h3></p>
+                                    <p>${data.tam_exp}</p>
+                                    <p>${data.eng_exp}</p>`
+            })
+        }
+     }" id="main">
+
+        <div class="header">
+            <div id="navdiv" class="pure-menu pure-menu-horizontal">
+                <a href="#" class="pure-menu-heading">Thirukural at Random</a>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item">
+                        <a href="#" class="pure-menu-link" x-on:click="home = true,about = false">Home</a>
+                    </li>
+                    <li class="pure-menu-item">
+                        <a href="#" class="pure-menu-link" x-on:click="home = false,about = true">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="splash-container">
+            <div class="splash">
+                <div class="content">
+                    <div x-show="home">
+                        <div id="container" class="center">
+                            <div id="btndiv">
+                                <a id="clickbtn" href="#" class="pure-button pure-button-primary">Get a new one</a>
+                            </div>
+                            <div id="contentdiv"></div>
+                        </div>
+                    </div>
+                    <div x-show="about">
+                        About Contents...
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <div class="content-wrapper">
+            
+        </div> -->
+       
+
+    </div>
+
+
+
+    <!-- <script src="index_prod.js"></script> -->
+    <script src="index.js"></script>
+</body>
+
 </html>
