@@ -5,11 +5,10 @@ btn.addEventListener('click', function (event) {
 	console.log(event); // The event details
 	console.log(event.target); // The clicked element
 
-    // fetch('https://randomkural.herokuapp.com/thirukural/0')
-    fetch('http://localhost:8081/thirukural/0')
+    fetch('https://randomkural.herokuapp.com/thirukural/0')
+    // fetch('http://localhost:8081/thirukural/0')
     .then(response => response.json())
     .then(data => {
-        console.log(data)
         contentdiv.innerHTML = `<p><h3>${data.sect_tam}</h3></p>
                                 <p>${data.line1}</p>
                                 <p>${data.line2}</p>
